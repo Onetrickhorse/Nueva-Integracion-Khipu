@@ -7,10 +7,10 @@ import cors from 'cors';
 
 dotenv.config();
 
-const app = express(); // ✅ app initialized here
+const app = express(); // ✅ Initialize the app first
 const port = process.env.PORT || 3000;
 
-app.use(cors()); // ✅ now this is safe
+app.use(cors()); // ✅ Now it's safe to use
 
 // Resolve __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
