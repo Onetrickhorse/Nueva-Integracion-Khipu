@@ -1,0 +1,98 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 36px;
+  color: #8347AD;
+  margin-bottom: 30px;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.product-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-details h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.product-details p {
+  color: #555;
+  font-size: 16px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.payment-form h3 {
+  font-size: 24px;
+  color: #8347AD;
+  margin-bottom: 15px;
+}
+
+.pay-button {
+  background-color: #8347AD;
+  color: white;
+  font-size: 18px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pay-button:hover {
+  background-color: #6f2a92;
+}
+
+/* Form responsiveness */
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-container {
+    margin-bottom: 20px;
+  }
+}

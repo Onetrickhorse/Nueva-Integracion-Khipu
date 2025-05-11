@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Integración con Khipu</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://js.khipu.com/v1/kws.js"></script>
+</head>
+<body>
+  <div class="page-container">
+    <h1>Integración con Khipu</h1>
+    <div class="form-container">
+      <div class="product-container">
+        <img src="./pictures/pikachu.jpeg" alt="Product Image" class="product-image"/>
+        <div class="product-details">
+          <h2>Producto X</h2>
+          <p>Precio: 5000 CLP</p>
+        </div>
+      </div>
+      <form id="payment-form" class="payment-form">
+        <h3>Proceda a pagar por su producto</h3>
+        <button type="submit" class="pay-button">Pagar ahora</button>
+      </form>
+      <div id="payment-info"></div> <!-- This is where payment info will be shown -->
+      <div id="error-msg" style="color: red;"></div> <!-- This is where error messages will be shown -->
+
+      <!-- Add Khipu Web root element here -->
+      <div id="khipu-web-root"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
