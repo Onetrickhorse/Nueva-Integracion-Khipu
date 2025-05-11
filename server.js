@@ -5,12 +5,12 @@ import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 import cors from 'cors';
 
-app.use(cors());
-
 dotenv.config();
 
-const app = express();
+const app = express(); // ✅ app initialized here
 const port = process.env.PORT || 3000;
+
+app.use(cors()); // ✅ now this is safe
 
 // Resolve __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -75,5 +75,6 @@ app.post('/create-payment', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
 
 
