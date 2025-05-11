@@ -3,6 +3,9 @@ import fetch from 'node-fetch';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
+import cors from 'cors';
+
+app.use(cors());
 
 dotenv.config();
 
