@@ -37,9 +37,9 @@ app.post('/create-payment', async (req, res) => {
     amount,
     currency: 'CLP',
     subject: 'Cobro de prueba',
-    return_url: `https://micomercio.com/order/${payment_id}`,
-    cancel_url: `https://micomercio.com/order/${payment_id}`,
-    notify_url: `https://micomercio.com/webhook/${payment_id}`,
+    return_url: 'https://micomercio.com/order/{payment_id}', // Use placeholder for payment_id
+    cancel_url: 'https://micomercio.com/order/{payment_id}', // Use placeholder for payment_id
+    notify_url: 'https://micomercio.com/webhook/{payment_id}', // Use placeholder for payment_id
   };
 
   try {
