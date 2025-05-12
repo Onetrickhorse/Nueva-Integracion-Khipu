@@ -63,6 +63,7 @@ app.post('/create-payment', async (req, res) => {
         payment_id: data.payment_id,
       });
     } else {
+      console.log("Error response from Khipu API", data);
       res.status(500).json({ error: data.error || 'Error creating payment' });
     }
   } catch (err) {
