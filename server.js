@@ -37,9 +37,9 @@ app.post('/create-payment', async (req, res) => {
     amount,
     currency: 'CLP',
     subject: 'Cobro de prueba',
-    return_url: 'https://nueva-integracion-khipu.onrender.com/create-payment',
-    cancel_url: 'https://micomercio.com/order/cancel_url',
-    notify_url: 'https://micomercio.com/webhook/notify_url',
+    return_url: `https://micomercio.com/order/${payment_id}`,
+    cancel_url: `https://micomercio.com/order/${payment_id}`,
+    notify_url: `https://micomercio.com/webhook/${payment_id}`,
   };
 
   try {
