@@ -7,10 +7,10 @@ import cors from 'cors';
 
 dotenv.config();
 
-const app = express(); // ✅ Initialize the app first
+const app = express(); // ✅ app initialized here
 const port = process.env.PORT || 3000;
 
-app.use(cors()); // ✅ Now it's safe to use
+app.use(cors()); // ✅ now this is safe
 
 // Resolve __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -37,9 +37,9 @@ app.post('/create-payment', async (req, res) => {
     amount,
     currency: 'CLP',
     subject: 'Cobro de prueba',
-    return_url: 'https://micomercio.com/order/return_url', // Use placeholder for payment_id
-    cancel_url: 'https://micomercio.com/order/cancel_url', // Use placeholder for payment_id
-    notify_url: 'https://micomercio.com/webhook/notify_url"', // Use placeholder for payment_id
+    return_url: 'https://localhost:3000/',
+    cancel_url: 'https://micomercio.com/order/cancel_url',
+    notify_url: 'https://micomercio.com/webhook/notify_url',
   };
 
   try {
@@ -63,7 +63,6 @@ app.post('/create-payment', async (req, res) => {
         payment_id: data.payment_id,
       });
     } else {
-      console.log("Error response from Khipu API", data);
       res.status(500).json({ error: data.error || 'Error creating payment' });
     }
   } catch (err) {
@@ -76,6 +75,5 @@ app.post('/create-payment', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-
 
 
